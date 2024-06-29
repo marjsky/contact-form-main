@@ -19,33 +19,47 @@
     <form action="submit">
       <label for="firstName">First Name</label>
       <input type="text" id="firstName" required>
+      <!-- This field is required -->
       <label for="lastName">Last Name</label>
       <input type="text" id="lastName" required>
+      <!-- This field is required -->
       <label for="email">Email Address</label>
       <input type="email" name="email" id="email">
+      <!-- Please enter a valid email address -->
+    
+      <fieldset>
+        <legend>Query Type</legend>
+        <div>
+          <input type="radio" id="general-enquiry" name="query" value="General Enquiry" required>
+          <label for="general-enquiry">General Enquiry</label>
+        </div>
+        <div>
+          <input type="radio" id="support-request" name="query" value="Support Request" required>
+          <label for="support-request">Support Request</label>
+        </div>
+        <!-- Please select a query type -->
+      </fieldset>
       
+      <label for="message">Message</label>
+      <textarea name="message" id="message" required></textarea>
+      <!-- This field is required -->
 
+      <div class="consent">
+        <input type="checkbox" name="consent" id="consent">
+        <label for="consent">I consent to being contacted by the team</label>
+        <!-- To submit this form, please consent to being contacted -->
+      </div>
+
+      <input type="submit" value="Submit">
     </form>
 
-    Email Address
-    Please enter a valid email address
-    This field is required
-
-    Query Type
-    General Enquiry
-    Support Request
-    Please select a query type
-
-    Message
-    This field is required
-
-    I consent to being contacted by the team
-    To submit this form, please consent to being contacted
-
-    Submit
-
-    Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <div class="sent">
+      <div class="checked-icon">
+        <img src="/assets/images/icon-success-check.svg" alt="success-checked">
+        <p>Message Sent!</p>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
   </div>
 
 </body>
